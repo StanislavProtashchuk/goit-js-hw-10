@@ -1,9 +1,11 @@
+{{#each this}}
 <div class="country__card">
 <img src="{{flags.png}}" alt="flag of country" class="country__flag">
 <h1 class="country__name">{{name.official}}</h1>
-<ul>
-    <li class="country__properties">{{capital}}</li>
-    <li class="country__properties">{{population}}</li>
-    <li class="country__properties">{{languages}}</li>
-</ul>
+    <p class="country__properties">Capital: {{capital}}</p>
+    <p class="country__properties">Population: {{population}}</p>
+    <p class="country__properties">Language: {{#each languages}}
+        {{#if @index}},{{/if}} {{this}}{{/each}}
+    </p>
 </div>
+{{/each}}
