@@ -28,7 +28,7 @@ function clearRender() {
 
 function renderCountryCard(country) {
     if (country.length > 10) {
-        Notiflix.Notify.info(`Oops, there is no country with that name`);
+        Notiflix.Notify.info(`Too many matches found. Please enter a more specific name.`);
     }
     if (1 < country.length && country.length < 10) {
         const markup = countryListTpl(country);
