@@ -11,7 +11,7 @@ body {
   color: #212121;
   line-height: 1.5;
 
-  width: 100%;
+  min-width: 1200px;
   height: 100vh;
   background: linear-gradient(
     27deg,
